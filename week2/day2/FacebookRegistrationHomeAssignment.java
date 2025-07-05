@@ -28,27 +28,26 @@ public class FacebookRegistrationHomeAssignment {
 		driver.manage().window().maximize();
 
 		// Adding Implicit Wait globally
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Create New Acc BTN
 		driver.findElement(By.partialLinkText("Create new")).click();
 
 		// Enter First Name
-		driver.findElement(By.xpath("//div[text()='First name']")).sendKeys("Testacc1");
+		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Testacc1");
 
 		// Enter Surname
-		driver.findElement(By.xpath("//div[text()='Surname']")).sendKeys("T");
+		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("T");
 
 		// Enter Mobile number or mail id element
-		driver.findElement(By.xpath("//div[text()='Mobile number or email address']")).sendKeys("9597215977");
+		driver.findElement(By.xpath("//input[@name='reg_email__']")).sendKeys("9597215977");
 
 		// enter new password
-		driver.findElement(By.xpath("//div[text()='New password']")).sendKeys("012346789");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("012346789");
 
 		// Handle all the dropdowns present in the web page
 		// Drop down date
-		WebElement dayDD = driver
-				.findElement(By.xpath("//span[@aria-describedby='birthday-error-message']/span/select[1]"));
+		WebElement dayDD = driver.findElement(By.xpath("//span[@aria-describedby='birthday-error-message']/span/select[1]"));
 
 		Select sel1 = new Select(dayDD);
 
