@@ -65,7 +65,7 @@ public class MarathonTC2Amazon {
 		// price of nag 
 		
 		WebElement priceOfBag = driver.findElement(By.xpath("(//span[@class='a-price-whole'])[1]"));
-		System.out.println(priceOfBag.getText());
+		System.out.println("The Price of the bag is:"+ priceOfBag.getText());
 		
 		System.out.println(driver.getTitle());
 		
